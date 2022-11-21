@@ -28,9 +28,9 @@ namespace EcgTest.ViewModels
         private void Create()
         {
             //注释这是用来测试git的
-            MenuBars.Add(new MenuBar() { Icon = "Cryengine", Title = "患者数据", NameSpace = "DataView" });
-            MenuBars.Add(new MenuBar() { Icon= "Cryengine", Title="心电图",NameSpace="IndexView"});
-            MenuBars.Add(new MenuBar() { Icon = "Cryengine", Title = "未知", NameSpace = "" });
+            MenuBars.Add(new MenuBar() { Icon = "Cryengine", Title = "患者数据1", NameSpace = "DataView" });
+            MenuBars.Add(new MenuBar() { Icon= "Cryengine", Title="心电图1",NameSpace="IndexView"});
+            MenuBars.Add(new MenuBar() { Icon = "Cryengine", Title = "未知1", NameSpace = "" });
         }
 
         private void Navigate(MenuBar obj)

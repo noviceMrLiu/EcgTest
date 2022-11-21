@@ -30,9 +30,9 @@ namespace EcgTest.ViewModels
 
         private void CreatePatient()
         {
-            PatientInfos.Add(new MeasuredParameter() { PatientId="1008611", ExamCode="11123", Date=DateTime.Now, Name="刘大发" });
-            PatientInfos.Add(new MeasuredParameter() { PatientId = "1008611", ExamCode = "11123", Date = DateTime.Now, Name = "刘大发" });
-            PatientInfos.Add(new MeasuredParameter() { PatientId = "1008611", ExamCode = "11123", Date = DateTime.Now, Name = "刘大发" });
+            PatientInfos.Add(new MeasuredParameter() { PatientId="1008611", ExamCode="11123", Date=DateTime.Now, Name="刘大发1123" });
+            PatientInfos.Add(new MeasuredParameter() { PatientId = "1008611", ExamCode = "11123", Date = DateTime.Now, Name = "刘大发123" });
+            PatientInfos.Add(new MeasuredParameter() { PatientId = "1008611", ExamCode = "11123", Date = DateTime.Now, Name = "刘大发123" });
         }
 
         private ObservableCollection<MeasuredParameter> patientInfos;
