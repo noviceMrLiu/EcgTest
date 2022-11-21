@@ -27,6 +27,7 @@ namespace EcgTest.ViewModels
 
         private void Create()
         {
+            //注释
             MenuBars.Add(new MenuBar() { Icon = "Cryengine", Title = "患者数据", NameSpace = "DataView" });
             MenuBars.Add(new MenuBar() { Icon= "Cryengine", Title="心电图",NameSpace="IndexView"});
             MenuBars.Add(new MenuBar() { Icon = "Cryengine", Title = "未知", NameSpace = "" });
