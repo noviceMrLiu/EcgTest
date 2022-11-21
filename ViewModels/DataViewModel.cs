@@ -16,9 +16,9 @@ namespace EcgTest.ViewModels
     {
         public DataViewModel(IRegionManager regionManager)
         {
-            PatientInfos = new ObservableCollection<PatientInfo>();
+            PatientInfos = new ObservableCollection<MeasuredParameter>();
             CreatePatient();
-            NavigateCommand = new DelegateCommand<PatientInfo>(Navigate);
+            NavigateCommand = new DelegateCommand<MeasuredParameter>(Navigate);
             this.regionManager = regionManager;
         }
 
@@ -30,14 +30,14 @@ namespace EcgTest.ViewModels
 
         private void CreatePatient()
         {
-            PatientInfos.Add(new PatientInfo() { PatientId="1008611", ExamCode="11123", Date=DateTime.Now, Name="刘大发" });
-            PatientInfos.Add(new PatientInfo() { PatientId = "1008611", ExamCode = "11123", Date = DateTime.Now, Name = "刘大发" });
-            PatientInfos.Add(new PatientInfo() { PatientId = "1008611", ExamCode = "11123", Date = DateTime.Now, Name = "刘大发" });
+            PatientInfos.Add(new MeasuredParameter() { PatientId="1008611", ExamCode="11123", Date=DateTime.Now, Name="刘大发" });
+            PatientInfos.Add(new MeasuredParameter() { PatientId = "1008611", ExamCode = "11123", Date = DateTime.Now, Name = "刘大发" });
+            PatientInfos.Add(new MeasuredParameter() { PatientId = "1008611", ExamCode = "11123", Date = DateTime.Now, Name = "刘大发" });
         }
 
-        private ObservableCollection<PatientInfo> patientInfos;
-        public DelegateCommand<PatientInfo> NavigateCommand { get; set; }
-        public ObservableCollection<PatientInfo> PatientInfos
+        private ObservableCollection<MeasuredParameter> patientInfos;
+        public DelegateCommand<MeasuredParameter> NavigateCommand { get; set; }
+        public ObservableCollection<MeasuredParameter> PatientInfos
         {
             get { return patientInfos; }
             set { patientInfos = value; RaisePropertyChanged(); }

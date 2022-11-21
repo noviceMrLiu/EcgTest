@@ -3,21 +3,19 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
-    xmlns:local="clr-namespace:EcgTest.Views"
-    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     x:Name="window"
     d:DesignHeight="650"
-    d:DesignWidth="1000"
+    d:DesignWidth="1500"
     mc:Ignorable="d">
-
+    <UserControl.Resources />
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
             <RowDefinition />
         </Grid.RowDefinitions>
         <Grid>
+
             <Grid.RowDefinitions>
                 <RowDefinition Height="35" />
                 <RowDefinition Height="120" />
@@ -25,7 +23,7 @@
             </Grid.RowDefinitions>
             <Label
                 HorizontalAlignment="Center"
-                Content="某某医院"
+                Content="沙雕医院"
                 FontSize="22"
                 FontWeight="Bold" />
             <Border
@@ -46,181 +44,334 @@
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
                 <StackPanel Orientation="Horizontal">
-                    <Label
-                        Margin="10,0"
-                        VerticalContentAlignment="Center"
-                        Content="姓名" />
-                    <TextBlock
-                        Margin="10,0"
-                        VerticalAlignment="Center"
-                        Text="sads" />
+                    <ItemsControl ItemsSource="{Binding MeasuredParameters}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label
+                                        Margin="10,0"
+                                        VerticalContentAlignment="Center"
+                                        Content="姓名" />
+                                    <TextBlock
+                                        Margin="10,0"
+                                        VerticalAlignment="Center"
+                                        Text="{Binding Name}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
                 </StackPanel>
                 <StackPanel Grid.Column="1" Orientation="Horizontal">
-                    <Label
-                        Margin="10,0"
-                        VerticalContentAlignment="Center"
-                        Content="姓名" />
-                    <TextBlock
-                        Margin="10,0"
-                        VerticalAlignment="Center"
-                        Text="sads" />
+                    <ItemsControl ItemsSource="{Binding MeasuredParameters}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label
+                                        Margin="10,0"
+                                        VerticalContentAlignment="Center"
+                                        Content="QRS" />
+                                    <TextBlock
+                                        Margin="10,0"
+                                        VerticalAlignment="Center"
+                                        Text="{Binding QRS}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
                 </StackPanel>
                 <StackPanel Grid.Column="2" Orientation="Horizontal">
-                    <Label
-                        Margin="10,0"
-                        VerticalContentAlignment="Center"
-                        Content="姓名" />
-                    <TextBlock
-                        Margin="10,0"
-                        VerticalAlignment="Center"
-                        Text="sads" />
+                    <ItemsControl ItemsSource="{Binding MeasuredParameters}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label
+                                        Margin="10,0"
+                                        VerticalContentAlignment="Center"
+                                        Content="RR/PP" />
+                                    <TextBlock
+                                        Margin="10,0"
+                                        VerticalAlignment="Center"
+                                        Text="{Binding RRPP}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
                 </StackPanel>
                 <StackPanel Grid.Row="1" Orientation="Horizontal">
-                    <Label
-                        Margin="10,0"
-                        VerticalContentAlignment="Center"
-                        Content="姓名" />
-                    <TextBlock
-                        Margin="10,0"
-                        VerticalAlignment="Center"
-                        Text="sads" />
+                    <ItemsControl ItemsSource="{Binding MeasuredParameters}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label
+                                        Margin="10,0"
+                                        VerticalContentAlignment="Center"
+                                        Content="性别" />
+                                    <TextBlock
+                                        Margin="10,0"
+                                        VerticalAlignment="Center"
+                                        Text="{Binding Sex}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
                 </StackPanel>
                 <StackPanel
                     Grid.Row="1"
                     Grid.Column="1"
                     Orientation="Horizontal">
-                    <Label
-                        Margin="10,0"
-                        VerticalContentAlignment="Center"
-                        Content="姓名" />
-                    <TextBlock
-                        Margin="10,0"
-                        VerticalAlignment="Center"
-                        Text="sads" />
+                    <ItemsControl ItemsSource="{Binding MeasuredParameters}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label
+                                        Margin="10,0"
+                                        VerticalContentAlignment="Center"
+                                        Content="QTQTC" />
+                                    <TextBlock
+                                        Margin="10,0"
+                                        VerticalAlignment="Center"
+                                        Text="{Binding QTQTC}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
                 </StackPanel>
                 <StackPanel
                     Grid.Row="1"
                     Grid.Column="2"
                     Orientation="Horizontal">
-                    <Label
-                        Margin="10,0"
-                        VerticalContentAlignment="Center"
-                        Content="姓名" />
-                    <TextBlock
-                        Margin="10,0"
-                        VerticalAlignment="Center"
-                        Text="sads" />
+                    <ItemsControl ItemsSource="{Binding MeasuredParameters}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label
+                                        Margin="10,0"
+                                        VerticalContentAlignment="Center"
+                                        Content="P/QRS/T" />
+                                    <TextBlock
+                                        Margin="10,0"
+                                        VerticalAlignment="Center"
+                                        Text="{Binding PQRST}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
                 </StackPanel>
                 <StackPanel Grid.Row="2" Orientation="Horizontal">
-                    <Label
-                        Margin="10,0"
-                        VerticalContentAlignment="Center"
-                        Content="姓名" />
-                    <TextBlock
-                        Margin="10,0"
-                        VerticalAlignment="Center"
-                        Text="sads" />
+                    <ItemsControl ItemsSource="{Binding MeasuredParameters}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label
+                                        Margin="10,0"
+                                        VerticalContentAlignment="Center"
+                                        Content="年龄" />
+                                    <TextBlock
+                                        Margin="10,0"
+                                        VerticalAlignment="Center"
+                                        Text="{Binding Age}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
                 </StackPanel>
                 <StackPanel
                     Grid.Row="2"
                     Grid.Column="1"
                     Orientation="Horizontal">
-                    <Label
-                        Margin="10,0"
-                        VerticalContentAlignment="Center"
-                        Content="姓名" />
-                    <TextBlock
-                        Margin="10,0"
-                        VerticalAlignment="Center"
-                        Text="sads" />
+                    <ItemsControl ItemsSource="{Binding MeasuredParameters}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label
+                                        Margin="10,0"
+                                        VerticalContentAlignment="Center"
+                                        Content="PR" />
+                                    <TextBlock
+                                        Margin="10,0"
+                                        VerticalAlignment="Center"
+                                        Text="{Binding PR}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
                 </StackPanel>
                 <StackPanel
                     Grid.Row="2"
                     Grid.Column="2"
                     Orientation="Horizontal">
-                    <Label
-                        Margin="10,0"
-                        VerticalContentAlignment="Center"
-                        Content="姓名" />
-                    <TextBlock
-                        Margin="10,0"
-                        VerticalAlignment="Center"
-                        Text="sads" />
+                    <ItemsControl ItemsSource="{Binding MeasuredParameters}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label
+                                        Margin="10,0"
+                                        VerticalContentAlignment="Center"
+                                        Content="RV5" />
+                                    <TextBlock
+                                        Margin="10,0"
+                                        VerticalAlignment="Center"
+                                        Text="{Binding RV5}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
                 </StackPanel>
                 <StackPanel Grid.Row="3" Orientation="Horizontal">
-                    <Label
-                        Margin="10,0"
-                        VerticalContentAlignment="Center"
-                        Content="姓名" />
-                    <TextBlock
-                        Margin="10,0"
-                        VerticalAlignment="Center"
-                        Text="sads" />
+                    <ItemsControl ItemsSource="{Binding MeasuredParameters}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label
+                                        Margin="10,0"
+                                        VerticalContentAlignment="Center"
+                                        Content="患者编号" />
+                                    <TextBlock
+                                        Margin="10,0"
+                                        VerticalAlignment="Center"
+                                        Text="{Binding PatientId}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
                 </StackPanel>
                 <StackPanel
                     Grid.Row="3"
                     Grid.Column="1"
                     Orientation="Horizontal">
-                    <Label
-                        Margin="10,0"
-                        VerticalContentAlignment="Center"
-                        Content="姓名" />
-                    <TextBlock
-                        Margin="10,0"
-                        VerticalAlignment="Center"
-                        Text="sads" />
+                    <ItemsControl ItemsSource="{Binding MeasuredParameters}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label
+                                        Margin="10,0"
+                                        VerticalContentAlignment="Center"
+                                        Content="P" />
+                                    <TextBlock
+                                        Margin="10,0"
+                                        VerticalAlignment="Center"
+                                        Text="{Binding P}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
                 </StackPanel>
                 <StackPanel
                     Grid.Row="3"
                     Grid.Column="2"
                     Orientation="Horizontal">
-                    <Label
-                        Margin="10,0"
-                        VerticalContentAlignment="Center"
-                        Content="姓名" />
-                    <TextBlock
-                        Margin="10,0"
-                        VerticalAlignment="Center"
-                        Text="sads" />
+                    <ItemsControl ItemsSource="{Binding MeasuredParameters}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label
+                                        Margin="10,0"
+                                        VerticalContentAlignment="Center"
+                                        Content="SV1+RV5" />
+                                    <TextBlock
+                                        Margin="10,0"
+                                        VerticalAlignment="Center"
+                                        Text="{Binding SV1RV5}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
                 </StackPanel>
                 <StackPanel Grid.Row="4" Orientation="Horizontal">
-                    <Label
-                        Margin="10,0"
-                        VerticalContentAlignment="Center"
-                        Content="姓名" />
-                    <TextBlock
-                        Margin="10,0"
-                        VerticalAlignment="Center"
-                        Text="sads" />
+                    <ItemsControl ItemsSource="{Binding MeasuredParameters}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label
+                                        Margin="10,0"
+                                        VerticalContentAlignment="Center"
+                                        Content="预约号" />
+                                    <TextBlock
+                                        Margin="10,0"
+                                        VerticalAlignment="Center"
+                                        Text="{Binding ExamCode}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
                 </StackPanel>
                 <StackPanel
                     Grid.Row="4"
                     Grid.Column="1"
                     Orientation="Horizontal">
-                    <Label
-                        Margin="10,0"
-                        VerticalContentAlignment="Center"
-                        Content="姓名" />
-                    <TextBlock
-                        Margin="10,0"
-                        VerticalAlignment="Center"
-                        Text="sads" />
-                </StackPanel>
-                <StackPanel
-                    Grid.Row="4"
-                    Grid.Column="2"
-                    Orientation="Horizontal">
-                    <Label
-                        Margin="10,0"
-                        VerticalContentAlignment="Center"
-                        Content="姓名" />
-                    <TextBlock
-                        Margin="10,0"
-                        VerticalAlignment="Center"
-                        Text="sads" />
+                    <ItemsControl ItemsSource="{Binding MeasuredParameters}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label
+                                        Margin="10,0"
+                                        VerticalContentAlignment="Center"
+                                        Content="采集时间" />
+                                    <TextBlock
+                                        Margin="10,0"
+                                        VerticalAlignment="Center"
+                                        Text="{Binding Date}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
                 </StackPanel>
             </Grid>
         </Grid>
-        <Canvas x:Name="myGrid" Grid.Row="1" />
+        <ContentControl
+            Grid.Row="1"
+            Width="1000"
+            MouseMove="ContentControl_MouseMove"
+            MouseUp="ContentControl_MouseUp"
+            PreviewMouseDown="ContentControl_PreviewMouseDown"
+            PreviewMouseWheel="ContentControl_PreviewMouseWheel">
+            <Canvas x:Name="myGrid">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock
+                        Margin="20,0"
+                        FontSize="30"
+                        Style="{StaticResource MaterialDesignButtonTextBlock}"
+                        Text="{Binding EcgData.LeadI}" />
+                    <Path
+                        Height="115"
+                        Margin="0,40"
+                        Data="{Binding EcgData.LeadDataI}"
+                        Stretch="Fill"
+                        Stroke="Black"
+                        StrokeDashArray="{Binding Stork}"
+                        StrokeThickness="1">
+
+                        <!--<Path.RenderTransform>
+                            <RotateTransform Angle="180"  />
+                        </Path.RenderTransform>-->
+                        <Path.Triggers>
+                            <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation
+                                            RepeatBehavior="3x"
+                                            Storyboard.TargetProperty="StrokeDashOffset"
+                                            From="{Binding From}"
+                                            To="0"
+                                            Duration="0:0:10" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </Path.Triggers>
+                    </Path>
+                    <TextBlock
+                        Margin="40,0"
+                        FontSize="30"
+                        Style="{StaticResource MaterialDesignButtonTextBlock}"
+                        Text="{Binding EcgData.LeadII}" />
+                    <Path
+                        x:Name="ecgII"
+                        Margin="0,-20"
+                        Data="{Binding EcgData.LeadDataII}"
+                        Stroke="Black"
+                        StrokeThickness="1" />
+                </StackPanel>
+            </Canvas>
+        </ContentControl>
     </Grid>
 </UserControl>

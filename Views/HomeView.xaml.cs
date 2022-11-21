@@ -22,6 +22,7 @@ namespace EcgTest.Views
     {
         public HomeView()
         {
+            
             InitializeComponent();
         }
     }

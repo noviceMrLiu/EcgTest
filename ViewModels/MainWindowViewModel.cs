@@ -5,6 +5,7 @@ using Prism.Ioc;
 using Prism.Mvvm;
 using Prism.Regions;
 using System.Collections.ObjectModel;
+using System.Windows;
 
 namespace EcgTest.ViewModels
 {
@@ -31,7 +32,7 @@ namespace EcgTest.ViewModels
             Create();
         }
         private string userName;
-
+        
         public string UserName
         {
             get { return userName; }
@@ -63,5 +64,6 @@ namespace EcgTest.ViewModels
             MenuBars.Add(new MenuBar() { Icon = "Home", Title = "首页", NameSpace = "HomeView" });
             MenuBars.Add(new MenuBar() { Icon = "Cog", Title = "设置", NameSpace = "SettingsView" });
         }
+
     }
 }

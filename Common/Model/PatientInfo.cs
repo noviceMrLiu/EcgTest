@@ -14,7 +14,7 @@ namespace EcgTest.Common.Model
 		public string PatientId
 		{
 			get { return patientId; }
-			set { patientId = value; RaisePropertyChanged(); }
+			set { patientId = value; }
 		}
 
 		private string examCode;
@@ -22,7 +22,7 @@ namespace EcgTest.Common.Model
 		public string ExamCode
 		{
 			get { return examCode; }
-			set { examCode = value; RaisePropertyChanged(); }
+			set { examCode = value;}
 		}
 
 		private string name;
@@ -30,15 +30,30 @@ namespace EcgTest.Common.Model
 		public string Name
 		{
 			get { return name; }
-			set { name = value; RaisePropertyChanged(); }
+			set { name = value;  }
 		}
+		private string sex;
+
+		public string Sex
+		{
+			get { return sex; }
+			set { sex = value; }
+		}
+		private int age;
+
+		public int Age
+		{
+			get { return age; }
+			set { age = value; }
+		}
+
 
 		private DateTime date;
 
 		public DateTime Date
 		{
 			get { return date; }
-			set { date = value; RaisePropertyChanged(); }
+			set { date = value;}
 		}
 
 	}
